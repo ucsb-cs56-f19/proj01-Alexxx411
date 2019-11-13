@@ -1,6 +1,6 @@
 # Application specific secrets files
-heroku.json
-localhost.json
+//heroku.json
+//localhost.json
 
 # For Java IDEs
 .classpath
