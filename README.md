@@ -1,11 +1,11 @@
 the web page of the documentation：
-https://ucsb-cs56-f19.github.io/lab07-Alexxx411/
+https://ucsb-cs56-f19.github.io/proj01-Alexxx411/
 
 the heroku link for the app:
-https://cs56-f19-lab07-alexxx411.herokuapp.com
+https://cs56-f19-proj01-alexxx411.herokuapp.com
 
 travis-ci:
-https://travis-ci.org/ucsb-cs56-f19/lab07-Alexxx411
+https://travis-ci.org/ucsb-cs56-f19/proj01-Alexxx411
 
 A simple Spring Boot webapp using:
 * Thymeleaf templating
