@@ -3,6 +3,7 @@ package earthquakes.controllers;
 import earthquakes.services.LocationQueryService;
 import earthquakes.searches.LocSearch;
 
+import earthquakes.osm.Place;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.oauth2.client.authentication.OAuth2AuthenticationToken;
@@ -39,6 +40,9 @@ public class LocationsController {
 
         String json = e.getJSON(locSearch.getLocation());
         model.addAttribute("json", json);
+
+        List<Place> place = Place.fromJSON(json);
+        model.addAttribute("place", place);
         
         return "locations/results";
     }
