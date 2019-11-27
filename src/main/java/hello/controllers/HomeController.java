@@ -2,6 +2,8 @@ package hello.controllers;
 
 import hello.geojson.FeatureCollection;
 
+import hello.services.MembershipService;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.oauth2.client.authentication.OAuth2AuthenticationToken;
 import org.springframework.security.oauth2.client.registration.ClientRegistration;
