@@ -13,8 +13,8 @@ import com.fasterxml.jackson.core.type.TypeReference;
 
 public class Place {
     public long place_id;
-    public double latitude;
-    public double longitude;
+    public double lat;
+    public double lon;
     public String display_name;
     public String type;
 
