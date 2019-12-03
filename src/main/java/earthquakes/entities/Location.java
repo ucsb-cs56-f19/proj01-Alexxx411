@@ -23,7 +23,7 @@ public class Location {
     public Long getPlaceId() { return placeId; }
     public void setPlaceId(Long id) { this.placeId = id; }
 
-    public String getNmae() { return name; }
+    public String getName() { return name; }
     public void setName(String n) { this.name = n; }
    
     public double getLatitude() { return latitude; }
