@@ -3,22 +3,51 @@
 public class EqSearch { 
 	private int distance;
  	private int minmag;
-<span class="fc" id="L6"> 	public EqSearch(){}</span>
+ 	private double lat;
+    private double lon;
+    private String location;
+
+<span class="fc" id="L10"> 	public EqSearch(){}</span>
 	public void setDistance(int d) 
 		{ 
-<span class="nc" id="L9">			distance = d; </span>
-<span class="nc" id="L10">		} </span>
+<span class="nc" id="L13">			distance = d; </span>
+<span class="nc" id="L14">		} </span>
 	public void setMinmag(int m) 
 		{ 
-<span class="nc" id="L13">			minmag = m; </span>
-<span class="nc" id="L14">		}</span>
+<span class="nc" id="L17">			minmag = m; </span>
+<span class="nc" id="L18">		}</span>
+	public void setLat(double l) 
+		{ 
+<span class="nc" id="L21">			lat=l; </span>
+<span class="nc" id="L22">		}</span>
+	public void setLon(double lo) 
+		{ 
+<span class="nc" id="L25">			lon=lo; </span>
+<span class="nc" id="L26">		}</span>
+	public void setLocation(String loc) 
+		{ 
+<span class="nc" id="L29">			location=loc; </span>
+<span class="nc" id="L30">		}</span>
+
 	public int getDistance() 
 		{ 
-<span class="fc" id="L17">			return distance; </span>
+<span class="fc" id="L34">			return distance; </span>
 		} 
 	public int getMinmag() 
 		{ 
-<span class="fc" id="L21">			return minmag; </span>
+<span class="fc" id="L38">			return minmag; </span>
 		}
+	public double getLat() 
+		{ 
+<span class="fc" id="L42">			return lat; </span>
+		} 
+	public double getLon() 
+		{ 
+<span class="fc" id="L46">			return lon; </span>
+		} 
+	public String getLocation() 
+		{ 
+<span class="fc" id="L50">			return location; </span>
+		} 
 } 
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>
