@@ -1,44 +1,44 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org" lang="en"> 
   <head>
-    <title>Favorite Locations</title>
+    <title>CS56 Spring Boot Practice App</title>
     <div th:replace="bootstrap/bootstrap_head.html"></div>
   </head>
   <body>
     <div class="container">
       <div th:replace="bootstrap/bootstrap_nav_header.html"></div>
 
-      <h1>Favorite Locations</h1>
-	      <table class="table">
-	          <thead>
-	              <tr>
-                      <th>Id</th>
-                      <th>UId</th>
-	                  <th>PlaceId</th>
-	                  <th>Display Name</th>
-	                  <th>Latitude</th>
-	                  <th>Longitude</th>
-	                  <th>Get Earthquakes</th>
-	                  <th>Delete</th>
-	              </tr>
-	          </thead>
-	          <tbody>
-	              <tr th:each="u: ${locations}">
-                    <td th:text="${u.id}"></td>
-                    <td th:text="${u.uid}"></td>
-	                <td th:text="${u.placeId}"></td>
-	                <td th:text="${u.name}"></td>
-	                <td th:text="${u.latitude}"></td>
-	                <td th:text="${u.longitude}"></td>
-	                <td><a th:href="@{/earthquakes/search/(lat=${u.latitude},lon=${u.longitude},location=${u.name})}">Get Earthquakes</a> </td>
-	                <td>
-                        <form th:method="delete" th:action="@{/locations/delete/} + ${u.id}">
-                            <input type="submit" class="btn btn-danger" value="Delete" />
-                        </form>
+      <h3>Favorite Locations</h3>
+          <table class="table">
+              <thead>
+                  <tr>
+					  <th>id</th>
+
+                      <th>placeId</th>
+                      <th>name</th>
+                      <th>latitude</th>
+                      <th>longitude</th>
+                      <th>Get Earthquakes</th>
+                      <th>Delete</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr th:each="l: ${locations}">
+					<td th:text="${l.id}"></td>
+
+                    <td th:text="${l.placeId}"></td>
+                    <td th:text="${l.name}"></td>
+                    <td th:text="${l.latitude}"></td>
+                    <td th:text="${l.longitude}"></td>
+                    <td ><a th:href="@{/earthquakes/search/(lat=${l.latitude},lon=${l.longitude},location=${l.name})}">Get Earthquakes</a></td>
+                    <td>
+                      <form th:method="delete" th:action="@{/locations/delete/} + ${l.id}">
+                           <input type="submit" class="btn btn-danger" value="Delete" />
+                      </form>
                     </td>
-	              </tr>
-	          </tbody>
-	      </table>
+                  </tr>
+              </tbody>
+          </table>
 
       <div th:replace="bootstrap/bootstrap_footer.html"></div>
     </div>

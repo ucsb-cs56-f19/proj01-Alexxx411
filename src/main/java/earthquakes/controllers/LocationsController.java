@@ -85,5 +85,12 @@ public class LocationsController {
         locationRepository.delete(location);
         model.addAttribute("locations", locationRepository.findAll());
         return "locations/index";
-}
+    }
+
+    @GetMapping("/locations/admin")
+    public String admin(Model model) {
+        Iterable<Location> locations= locationRepository.findAll();
+        model.addAttribute("locations", locations);
+        return "locations/admin";
+    }
 }
