@@ -10,4 +10,3 @@ public interface LocationRepository extends CrudRepository<Location, Long> {
    List<Location> findByPlaceId(Long placeId);
    List<Location> findByUid(String uid);
 }
-}
